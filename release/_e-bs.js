@@ -327,12 +327,12 @@ var jeeBs_prototype = function() {
 
           var prog = _e().addClass("progress");
 
-          bb = prog.div("progress-bar", {
-            "role": "progressbar",
-            "aria-valuenow": options.value,
-            "aria-valuemin": options.valuemin,
-            "aria-valuemax": options.valuemax
-          })
+          var bb = prog.div("progress-bar", {
+              "role": "progressbar",
+              "aria-valuenow": options.value,
+              "aria-valuemin": options.valuemin,
+              "aria-valuemax": options.valuemax
+            })
             .width(prog.str([options.value, "%"]));
 
           bb.span("sr-only").text(options.title);

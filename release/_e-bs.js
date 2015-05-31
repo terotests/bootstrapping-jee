@@ -105,6 +105,7 @@ var jeeBs_prototype = function() {
               bc.add(aa);
             });
           }
+          this.add(bc);
           return bc;
         }
       });

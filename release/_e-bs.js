@@ -286,7 +286,8 @@ var jeeBs_prototype = function() {
     _myTrait_.panel = function(t) {
       _e().extendAll({
         bsPanel: function(options) {
-          var o = _e("div").addClass("panel panel-" + (options.type || "default"));
+
+          var o = _e("div").addClass(_e().str("panel panel-", (options.type || "default")));
           var head = o.div("panel-heading"),
             body,
             footer,

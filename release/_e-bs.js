@@ -150,6 +150,7 @@ var jeeBs_prototype = function() {
       this.dropDown();
       this.pagination();
       this.panel();
+      this.progress();
     });
     _myTrait_.listgroupExtension = function(options) {
       /*
@@ -304,6 +305,39 @@ var jeeBs_prototype = function() {
 
           this.add(o);
           return o;
+
+        }
+      });
+    }
+    _myTrait_.progress = function(t) {
+      /*
+           <div class="progress">
+             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+               <span class="sr-only">60% Complete</span>
+             </div>
+           </div>
+           */
+
+      _e().extendAll({
+        bsProgress: function(item, options, context) {
+
+          options.value = options.value || 0;
+          if (!options.valuemin) options.valuemin = 0;
+          if (!options.valuemax) options.valuemax = 100;
+
+          var prog = _e().addClass("progress");
+
+          bb = prog.div("progress-bar", {
+            "role": "progressbar",
+            "aria-valuenow": options.value,
+            "aria-valuemin": options.valuemin,
+            "aria-valuemax": options.valuemax
+          })
+            .width(prog.str([options.value, "%"]));
+
+          bb.span("sr-only").text(item.title);
+          this.add(prog);
+          return prog;
 
         }
       });

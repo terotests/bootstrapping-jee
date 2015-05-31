@@ -197,31 +197,11 @@ var jeeBs_prototype = function() {
               }
 
               me.bsSetItemContent(item, aa, options);
-              /*
-                               if(item.iconImg) {
-                                   aa.img("iconImg", {
-                                       src : item.iconImg
-                                   });
-                               }
-                                
-                                if(item.leftBadge) aa[options.spanElem || "span"]("badge").text(item.leftBadge); 
-                                if(item.title) aa[options.titleElem || options.spanElem || "span"]("title").add(item.title);
-                                
-                                if(item.buttongroup) {
-                                   var o = this.buttonGroup(item.buttongroup);
-                                   myLi.add(o);
-                                }
-                                
-                       
-                                if(item.rightBadge) aa[options.spanElem || "span"]("badge").text(item.rightBadge); 
-                                if(item.active) myLi.addClass("active");
-                                */
 
               if (item.dropdown && options.listClass) {
                 aa[options.spanElem || "span"]("caret")
                 myLi.add(item.dropdown);
               }
-
               me.bsSetItemAction(item, aa, options);
 
             });

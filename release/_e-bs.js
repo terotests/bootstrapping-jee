@@ -319,7 +319,7 @@ var jeeBs_prototype = function() {
            */
 
       _e().extendAll({
-        bsProgress: function(item, options, context) {
+        bsProgress: function(options) {
 
           options.value = options.value || 0;
           if (!options.valuemin) options.valuemin = 0;
@@ -335,7 +335,7 @@ var jeeBs_prototype = function() {
           })
             .width(prog.str([options.value, "%"]));
 
-          bb.span("sr-only").text(item.title);
+          bb.span("sr-only").text(options.title);
           this.add(prog);
           return prog;
 

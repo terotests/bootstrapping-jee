@@ -358,7 +358,7 @@ var jeeBs_prototype = function() {
             })
             .width(prog.str([options.value, "%"]));
 
-          bb.span("sr-only").text(options.title);
+          bb.text(options.title);
           this.add(prog);
           return prog;
 

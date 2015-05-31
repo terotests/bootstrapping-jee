@@ -1,4 +1,4 @@
-# jeeBs, bootstrapping library for Jeejs
+# jeebs, bootstrapping library for jeejs
 
 Creating Twitter Bootsrap components for the `jeejee` -library
 

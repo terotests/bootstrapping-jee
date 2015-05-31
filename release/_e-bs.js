@@ -83,8 +83,8 @@ var jeeBs_prototype = function() {
             if (item.size == "m") sz = "";
           }
           var aa = _e("button");
-          aa.addClass("btn btn-" + (item.type || "default"));
-          if (sz) aa.addClass(sz);
+          aa.addClass(this.str(["btn btn-", (item.type || "default")]));
+          if (sz) aa.addClass(this.str(["btn-", item.size]));
 
           this.bsSetItemContent(item, aa);
           this.bsSetItemAction(item, aa, options, context);

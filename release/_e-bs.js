@@ -243,7 +243,7 @@ var jeeBs_prototype = function() {
         bsPagination: function(options) {
           var me = this;
           var bc = _e("ul").addClass("pagination");
-          var left = bc.li().a().text("&laquo;");
+          var left = bc.li().a().html("&laquo;");
           if (options.items) {
             var context = {};
             options.items.forEach(function(item) {
@@ -253,7 +253,7 @@ var jeeBs_prototype = function() {
               me.bsSetItemAction(item, aa, options, context);
             });
           }
-          var right = bc.li().a().text("&raquo;");
+          var right = bc.li().a().html("&raquo;");
           this.add(bc);
           return bc;
         }

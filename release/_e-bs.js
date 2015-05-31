@@ -84,6 +84,7 @@ var jeeBs_prototype = function() {
               me.bsSetItemAction(item, aa, options);
             });
           }
+          this.add(o);
           return o;
         }
       });

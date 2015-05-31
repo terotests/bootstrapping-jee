@@ -241,7 +241,7 @@ var jeeBs_prototype = function() {
 
       _e().extendAll({
         bsPagination: function(options) {
-
+          var me = this;
           var bc = _e("ul").addClass("pagination");
           var left = bc.li().a().text("&laquo;");
           if (options.items) {
@@ -249,8 +249,8 @@ var jeeBs_prototype = function() {
             options.items.forEach(function(item) {
               var myLi = bc.li(); // .a().text(item.title);
               var aa = myLi.a();
-              this.bsSetItemContent(item, aa);
-              this.bsSetItemAction(item, aa, options, context);
+              me.bsSetItemContent(item, aa);
+              me.bsSetItemAction(item, aa, options, context);
             });
           }
           var right = bc.li().a().text("&raquo;");

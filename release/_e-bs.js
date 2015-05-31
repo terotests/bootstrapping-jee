@@ -8,6 +8,9 @@ var jeeBs_prototype = function() {
 
           if (item.active && context) {
             context.lastActive = toElem;
+            later().add(function() {
+              toElem.trigger("click");
+            });
           }
           toElem.on("click", function() {
             if (context) {

@@ -1,14 +1,6 @@
 var jeeBs_prototype = function() {
   'use strict';;
   (function(_myTrait_) {
-    var _eg;
-    var _ee_;
-    var guid;
-    var _screenInit;
-    var _svgElems;
-    var _registry;
-    var _elemNames;
-    var _hasRemoted;
     _myTrait_.basicFunctions = function(t) {
       _e().extendAll({
 

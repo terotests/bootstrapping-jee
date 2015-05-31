@@ -147,6 +147,7 @@ var jeeBs_prototype = function() {
       this.listgroupExtension();
       this.navtabs();
       this.dropDown();
+      this.pagination();
       this.panel();
     });
     _myTrait_.listgroupExtension = function(options) {

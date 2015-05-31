@@ -15,7 +15,7 @@ var jeeBs_prototype = function() {
                 context.lastActive.removeClass("active");
                 var p = context.lastActive.parent();
                 if (p) {
-                  removeClass("active");
+                  p.removeClass("active");
                 }
               }
               context.lastActive = toElem;

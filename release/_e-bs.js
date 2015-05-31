@@ -63,7 +63,7 @@ var jeeBs_prototype = function() {
             myLi.add(o);
           }
 
-          if (item.title) toElem.span().add(item.title);
+          if (item.title) toElem.span().html(item.title);
           if (item.rightBadge) toElem.span("badge").text(item.rightBadge);
           if (item.active) toElem.addClass("active");
 

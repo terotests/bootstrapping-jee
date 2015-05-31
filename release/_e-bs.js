@@ -41,11 +41,11 @@ var jeeBs_prototype = function() {
         // setItemContent
         bsSetItemContent: function(item, toElem) {
           if (item.faicon) {
-            toElem.span("fa fa-" + item.faicon);
+            toElem.span(toElem.str(["fa fa-", item.glyph]));
             toElem.span().html("&nbsp;");
           }
           if (item.glyph) {
-            toElem.span("glyphicon glyphicon-" + item.glyph);
+            toElem.span(toElem.str(["glyphicon glyphicon-", item.glyph]));
             toElem.span().html("&nbsp;");
           }
           if (item.iconImg) {

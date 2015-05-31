@@ -1,4 +1,4 @@
-# Some boostrapping examples
+# jeeBs, bootstrapping library for Jeejs
 
 Creating Twitter Bootsrap components for the `jeejee` -library
 

@@ -71,6 +71,23 @@ var jeeBs_prototype = function() {
         }
       });
     }
+    _myTrait_.bread = function(t) {
+
+      _e().extendAll({
+        bsBreadcrumb: function(options) {
+          var o = _e("div");
+          var bc = o.ol("breadcrumb");
+          var me = this;
+          if (options.items) {
+            options.items.forEach(function(item) {
+              var aa = bc.li().a().text(item.title);
+              me.bsSetItemAction(item, aa, options);
+            });
+          }
+          return o;
+        }
+      });
+    }
     _myTrait_.button = function(item, options, context) {
       _e().extendAll({
 
@@ -154,6 +171,7 @@ var jeeBs_prototype = function() {
       this.pagination();
       this.panel();
       this.progress();
+      this.bread();
     });
     _myTrait_.listgroupExtension = function(options) {
       /*

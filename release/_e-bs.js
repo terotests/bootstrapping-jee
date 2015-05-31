@@ -162,7 +162,7 @@ var jeeBs_prototype = function() {
            */
 
       _e().extendAll({
-        bsListgroup: function(options) {
+        bsListGroup: function(options) {
 
           var me = this;
           var bc = _e(options.ulElem || "ul").addClass(options.listClass || "list-group");

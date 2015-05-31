@@ -2,7 +2,7 @@
 
 Creating Twitter Bootsrap components for the `jeejee` -library
 
-http://jsfiddle.net/mxLrqny1/
+http://jsfiddle.net/8j6edrp9/
 
 
 

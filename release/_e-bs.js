@@ -239,7 +239,7 @@ var jeeBs_prototype = function() {
 
 
       _e().extendAll({
-        nsPagination: function(options) {
+        bsPagination: function(options) {
 
           var bc = _e("ul").addClass("pagination");
           var left = bc.li().a().text("&laquo;");

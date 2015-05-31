@@ -141,7 +141,7 @@ var jeeBs_prototype = function() {
     if (!_myTrait_.__traitInit) _myTrait_.__traitInit = []
     _myTrait_.__traitInit.push(function(t) {
 
-      this.basicFunction();
+      this.basicFunctions();
       this.buttonGroup();
       this.button();
       this.listgroupExtension();

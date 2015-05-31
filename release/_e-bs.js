@@ -206,6 +206,7 @@ var jeeBs_prototype = function() {
 
             });
           }
+          this.add(bc);
           return bc;
         }
       });

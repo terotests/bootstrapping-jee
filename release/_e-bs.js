@@ -28,7 +28,7 @@ var jeeBs_prototype = function() {
 
           if (item.href) {
 
-            main.div().pageController("default", {
+            toElem.pageController("default", {
               "default": function(params, canvas, data) {
                 /*
                                     this.clear();

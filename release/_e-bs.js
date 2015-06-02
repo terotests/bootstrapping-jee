@@ -44,8 +44,9 @@ var jeeBs_prototype = function() {
                 var cmp1 = item.href.split("/").join("_"),
                   cmp2 = data.hash.split("/").join("_");
 
+                console.log(cmp2, "vs", cmp1);
                 if (cmp2.indexOf("#" + cmp1) == 0) {
-
+                  console.log("success");
                   if (context) {
                     if (context.lastActive) {
                       context.lastActive.removeClass("active");
@@ -56,6 +57,8 @@ var jeeBs_prototype = function() {
                     }
                     context.lastActive = toElem;
                     toElem.addClass("active");
+                  } else {
+                    console.log("no context");
                   }
                   var p = toElem.parent();
                   if (p) p.addClass("active");

@@ -40,6 +40,8 @@ var jeeBs_prototype = function() {
                                     canvas.bsBreadcrumb( { items : items } );
                                     */
 
+                console.log(data.hash, "vs", item.href);
+
                 if (data.hash.indexOf("#" + item.href) == 0) {
 
                   if (context) {

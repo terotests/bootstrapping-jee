@@ -37,6 +37,9 @@ var jeeBs_prototype = function() {
                 options.content.pushView(item.view);
               }
             }
+            if (item.href) {
+              document.location.hash = item.href;
+            }
           });
 
         },

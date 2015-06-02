@@ -3,7 +3,20 @@ var jeeBs_prototype = function() {
   (function(_myTrait_) {
     _myTrait_.basicFunctions = function(t) {
       _e().extendAll({
-
+        /*
+           // Hash object
+           {
+             "hash": "#frontpage/",
+             "parts": [
+               "#frontpage",
+               ""
+             ],
+             "controller": "frontpage",
+             "action": "",
+             "params": {},
+             "rest": []
+           } 
+                   */
         bsSetItemAction: function(item, toElem, options, context) {
 
           if (item.active && context) {
@@ -12,6 +25,44 @@ var jeeBs_prototype = function() {
               toElem.trigger("click");
             });
           }
+
+          if (item.href) {
+
+            main.div().pageController("default", {
+              "default": function(params, canvas, data) {
+                /*
+                                    this.clear();
+                                    console.log("Default", data);
+                                    var items = [];
+                                    if(data.controller) items.push( { title : data.controller || ""} );
+                                    if(data.action )  items.push( { title : data.action || ""} );
+                                    if(params["id"] ) items.push( { title : params["id"] || ""} );
+                                    canvas.bsBreadcrumb( { items : items } );
+                                    */
+
+                if (data.hash.indexOf("#" + item.href) == 0) {
+
+                  if (context) {
+                    if (context.lastActive) {
+                      context.lastActive.removeClass("active");
+                      var p = context.lastActive.parent();
+                      if (p) {
+                        p.removeClass("active");
+                      }
+                    }
+                    context.lastActive = toElem;
+                    toElem.addClass("active");
+                  }
+                  var p = toElem.parent();
+                  if (p) p.addClass("active");
+                }
+
+
+              }
+            });
+
+          }
+
           toElem.on("click", function() {
             if (context) {
               if (context.lastActive) {

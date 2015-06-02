@@ -41,8 +41,10 @@ var jeeBs_prototype = function() {
                                     */
 
                 console.log(data.hash, "vs", item.href);
+                var cmp1 = item.href.split("/").join("_"),
+                  cmp2 = data.hash.split("/").join("_");
 
-                if (data.hash.indexOf("#" + item.href) == 0) {
+                if (cmp2.indexOf("#" + cmp1) == 0) {
 
                   if (context) {
                     if (context.lastActive) {

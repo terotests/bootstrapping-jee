@@ -12,11 +12,6 @@ var jeeBs_prototype = function() {
             });
           }
 
-          if (item.route) {
-            var parts = item.route.split("/");
-            toElem.pushTo(parts[0], parts[1], parts[2]);
-          }
-
           if (item.href) {
 
             toElem.pageController("default", {
@@ -67,6 +62,14 @@ var jeeBs_prototype = function() {
               }
             }
             if (item.action) item.action();
+
+            if (item.route) {
+              var parts = item.route.split("/");
+              console.log("Push");
+              console.log(parts);
+              toElem.pushTo(parts[0], parts[1], parts[2]);
+            }
+
             if (item.view) {
               if (options.content) {
                 options.content.pushView(item.view);

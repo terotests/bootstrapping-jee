@@ -26,27 +26,20 @@ var jeeBs_prototype = function() {
             });
           }
 
+          if (item.route) {
+            var parts = item.route.split("/");
+            elem.pushTo(parts[0], parts[1], parts[2]);
+          }
+
           if (item.href) {
 
             toElem.pageController("default", {
               "default": function(params, canvas, data) {
-                /*
-                                    this.clear();
-                                    console.log("Default", data);
-                                    var items = [];
-                                    if(data.controller) items.push( { title : data.controller || ""} );
-                                    if(data.action )  items.push( { title : data.action || ""} );
-                                    if(params["id"] ) items.push( { title : params["id"] || ""} );
-                                    canvas.bsBreadcrumb( { items : items } );
-                                    */
 
-                console.log(data.hash, "vs", item.href);
                 var cmp1 = item.href.split("/").join("_"),
                   cmp2 = data.hash.split("/").join("_");
 
-                console.log(cmp2, "vs", cmp1);
                 if (cmp2.indexOf("#" + cmp1) == 0) {
-                  console.log("success");
                   if (context) {
                     if (context.lastActive) {
                       context.lastActive.removeClass("active");
@@ -63,8 +56,6 @@ var jeeBs_prototype = function() {
                   var p = toElem.parent();
                   if (p) p.addClass("active");
                 }
-
-
               }
             });
 
